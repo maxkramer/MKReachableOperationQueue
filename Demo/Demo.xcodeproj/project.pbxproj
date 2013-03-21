@@ -330,6 +330,7 @@
 				50E0EAEB16FBA97D00375473 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

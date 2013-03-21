@@ -3,7 +3,29 @@ MKReachableOperationQueue
 
 MKReachableOperationQueue is an NSOperationQueue subclass that automatically responds to changes in internet connection with thanks to Apple's Reachability.
 
+##Installation
+==============
+###Cocoapods
+
+Add pod `'MKReachableOperationQueue'` to your Podfile.
+
+	pod 'MKReachableOperationQueue', '~>1.0.0'
+
+###Old-School
+
+Add the `MKReachableOperationQueue.{h,m}` and `Reachability.{h,m}` files to your Xcode project.
+
+#####Important
+==============
+
+- Apple's Reachability requires the `SystemConfiguration.framework`, so please make sure that you have linked it to your project.
+
+- If your project is not using ARC, please enable ARC for `MKReachableOperationQueue.m` by adding the Compiler Flag `-fobjc-arc`.
+
+- However, if your project is using ARC, please disable ARC for the Reachability.m file by adding the Compiler Flag `-fno-objc-arc`.
+
 ##Usage
+=======
 
 You can instantiate an MKReachableOperationQueue object as normal, but make sure that you set the `suspendQueueWhenUnreachable` property to `YES` if you would like the subclass to automatically respond to the changes. If this property is set to `NO`, the callback will called without a change in the state of the queue. In this case, you would have to manage the suspension.
 
@@ -23,6 +45,7 @@ You can instantiate an MKReachableOperationQueue object as normal, but make sure
     }];
 
 ##License
+=========
 
 Copyright (c) 2013 Max Kramer
  
