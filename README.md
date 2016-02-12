@@ -5,7 +5,7 @@ MKReachableOperationQueue is an NSOperationQueue subclass that automatically res
 
 ##Installation
 ==============
-###Cocoapods
+###CocoaPods
 
 Add pod `'MKReachableOperationQueue'` to your Podfile.
 
